@@ -40,7 +40,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.Passwordtxt = new Guna.UI2.WinForms.Guna2TextBox();
-            this.PictureBtn = new Guna.UI2.WinForms.Guna2TileButton();
+            this.CreateAccBtn = new Guna.UI2.WinForms.Guna2TileButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,7 +101,7 @@
             this.Email.PlaceholderText = "";
             this.Email.SelectedText = "";
             this.Email.Size = new System.Drawing.Size(225, 36);
-            this.Email.TabIndex = 15;
+            this.Email.TabIndex = 1;
             // 
             // label4
             // 
@@ -149,7 +149,7 @@
             this.UserName.PlaceholderText = "";
             this.UserName.SelectedText = "";
             this.UserName.Size = new System.Drawing.Size(225, 36);
-            this.UserName.TabIndex = 16;
+            this.UserName.TabIndex = 0;
             // 
             // label1
             // 
@@ -213,25 +213,25 @@
             this.Passwordtxt.PlaceholderText = "";
             this.Passwordtxt.SelectedText = "";
             this.Passwordtxt.Size = new System.Drawing.Size(223, 36);
-            this.Passwordtxt.TabIndex = 15;
+            this.Passwordtxt.TabIndex = 2;
             // 
-            // PictureBtn
+            // CreateAccBtn
             // 
-            this.PictureBtn.BorderRadius = 5;
-            this.PictureBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.PictureBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.PictureBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.PictureBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.PictureBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(60)))), ((int)(((byte)(126)))));
-            this.PictureBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PictureBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(168)))), ((int)(((byte)(211)))));
-            this.PictureBtn.Location = new System.Drawing.Point(144, 369);
-            this.PictureBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.PictureBtn.Name = "PictureBtn";
-            this.PictureBtn.Size = new System.Drawing.Size(119, 56);
-            this.PictureBtn.TabIndex = 22;
-            this.PictureBtn.Text = "Save Changes";
-            this.PictureBtn.Click += new System.EventHandler(this.PictureBtn_Click);
+            this.CreateAccBtn.BorderRadius = 5;
+            this.CreateAccBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CreateAccBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CreateAccBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CreateAccBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CreateAccBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(60)))), ((int)(((byte)(126)))));
+            this.CreateAccBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateAccBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(168)))), ((int)(((byte)(211)))));
+            this.CreateAccBtn.Location = new System.Drawing.Point(144, 369);
+            this.CreateAccBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.CreateAccBtn.Name = "CreateAccBtn";
+            this.CreateAccBtn.Size = new System.Drawing.Size(119, 56);
+            this.CreateAccBtn.TabIndex = 3;
+            this.CreateAccBtn.Text = "Save Changes";
+            this.CreateAccBtn.Click += new System.EventHandler(this.CreateAccBtn_Click);
             // 
             // ManageProfile
             // 
@@ -239,7 +239,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(26)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(402, 450);
-            this.Controls.Add(this.PictureBtn);
+            this.Controls.Add(this.CreateAccBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.AccountType);
             this.Controls.Add(this.label6);
@@ -260,17 +260,17 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2ComboBox AccountType;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2TextBox Email;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox UserName;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2TextBox Passwordtxt;
-        private Guna.UI2.WinForms.Guna2TileButton PictureBtn;
+        private Guna.UI2.WinForms.Guna2TileButton CreateAccBtn;
+        public Guna.UI2.WinForms.Guna2ComboBox AccountType;
+        public Guna.UI2.WinForms.Guna2TextBox Email;
+        public Guna.UI2.WinForms.Guna2TextBox UserName;
+        public Guna.UI2.WinForms.Guna2TextBox Passwordtxt;
     }
 }

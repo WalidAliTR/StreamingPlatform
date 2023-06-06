@@ -47,7 +47,10 @@ namespace StreamingPlatform
         private void guna2ImageButton4_Click(object sender, EventArgs e)
         {
             timer1.Stop();
-            if(picplace<3) HighightPanel.BackgroundImage = GetImage((byte[])HighlightImages.Rows[picplace++][0]);
+            if (picplace < 5) HighightPanel.BackgroundImage = GetImage((byte[])HighlightImages.Rows[picplace++][0]);
+            else {
+                picplace = 0;
+                HighightPanel.BackgroundImage = GetImage((byte[])HighlightImages.Rows[picplace++][0]); }
             timer1.Start();
         }
 
@@ -55,6 +58,11 @@ namespace StreamingPlatform
         {
             timer1.Stop();
             if (picplace>0) HighightPanel.BackgroundImage = GetImage((byte[])HighlightImages.Rows[picplace--][0]);
+            else
+            {
+                picplace = 4;
+                HighightPanel.BackgroundImage = GetImage((byte[])HighlightImages.Rows[picplace--][0]);
+            }
             timer1.Start();
         }
 
@@ -63,7 +71,7 @@ namespace StreamingPlatform
             string query = "select Name,Picture from MovieTb";
             ShowMovies(query);
 
-            query = "select Top 3 Picture from MovieTb order by IMDbRating DESC";
+            query = "select Top 5 Picture from MovieTb order by IMDbRating DESC";
             con.Open();
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             sda.Fill(HighlightImages);
@@ -143,7 +151,7 @@ namespace StreamingPlatform
 
         private void Top10Btn_Click(object sender, EventArgs e)
         {
-            string query = "select top 10 Name,Picture from MovieTb Order by IMDbRating ASC";
+            string query = "select top 10 Name,Picture from MovieTb Order by IMDbRating DESC";
             ShowMovies(query);
         }
 
@@ -168,13 +176,23 @@ namespace StreamingPlatform
         private void timer1_Tick(object sender, EventArgs e)
         {
             HighightPanel.BackgroundImage = GetImage((byte[])HighlightImages.Rows[picplace++][0]);
-            if (picplace==3)picplace= 0;
+            if (picplace==5)picplace= 0;
         }
 
         private void ManageProfileToolStrip_Click(object sender, EventArgs e)
         {
             ManageProfile manageProfile = new ManageProfile();
-                manageProfile.ShowDialog();
+            string query = "select * from UserTb where ID= '" + LoginForm.UserID + "'";
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(query,con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            manageProfile.UserName.Text = dt.Rows[0][1].ToString();
+            manageProfile.AccountType.Text = dt.Rows[0][2].ToString();
+            manageProfile.Email.Text = dt.Rows[0][3].ToString();
+            manageProfile.Passwordtxt.Text = dt.Rows[0][4].ToString();
+            con.Close();
+            manageProfile.ShowDialog();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -182,6 +200,19 @@ namespace StreamingPlatform
             this.Hide();
             LoginForm login = new LoginForm();
             login.Show();
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+            if (openstate == false) {
+                MenuBtn.PerformClick();
+            }
+            SearchBox.Focus();
         }
     }
 }

@@ -195,7 +195,7 @@
             this.UserMenu.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.UserMenu.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.UserMenu.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.UserMenu.Size = new System.Drawing.Size(198, 98);
+            this.UserMenu.Size = new System.Drawing.Size(198, 76);
             // 
             // ManageProfileToolStrip
             // 
@@ -335,6 +335,7 @@
             this.guna2ImageButton7.PressedState.ImageSize = new System.Drawing.Size(43, 43);
             this.guna2ImageButton7.Size = new System.Drawing.Size(50, 54);
             this.guna2ImageButton7.TabIndex = 0;
+            this.guna2ImageButton7.Click += new System.EventHandler(this.WatchlistBtn_Click);
             // 
             // WatchlistBtn
             // 
@@ -440,6 +441,7 @@
             this.guna2ImageButton6.PressedState.ImageSize = new System.Drawing.Size(43, 43);
             this.guna2ImageButton6.Size = new System.Drawing.Size(50, 50);
             this.guna2ImageButton6.TabIndex = 0;
+            this.guna2ImageButton6.Click += new System.EventHandler(this.TVshowsBtn_Click);
             // 
             // TVshowsBtn
             // 
@@ -493,6 +495,7 @@
             this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(43, 43);
             this.guna2ImageButton2.Size = new System.Drawing.Size(50, 50);
             this.guna2ImageButton2.TabIndex = 0;
+            this.guna2ImageButton2.Click += new System.EventHandler(this.MoviesBtn_Click);
             // 
             // MoviesBtn
             // 
@@ -546,6 +549,7 @@
             this.guna2ImageButton5.PressedState.ImageSize = new System.Drawing.Size(43, 43);
             this.guna2ImageButton5.Size = new System.Drawing.Size(50, 50);
             this.guna2ImageButton5.TabIndex = 0;
+            this.guna2ImageButton5.Click += new System.EventHandler(this.Top10Btn_Click);
             // 
             // Top10Btn
             // 
@@ -599,6 +603,7 @@
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(43, 43);
             this.guna2ImageButton1.Size = new System.Drawing.Size(50, 50);
             this.guna2ImageButton1.TabIndex = 0;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.HomeBtn_Click);
             // 
             // HomeBtn
             // 
@@ -681,6 +686,7 @@
             this.SearchBtn.PressedState.ImageSize = new System.Drawing.Size(30, 30);
             this.SearchBtn.Size = new System.Drawing.Size(50, 50);
             this.SearchBtn.TabIndex = 1;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // guna2Separator7
             // 
@@ -738,6 +744,7 @@
             this.ExitBtn.PressedColor = System.Drawing.Color.DarkRed;
             this.ExitBtn.Size = new System.Drawing.Size(45, 29);
             this.ExitBtn.TabIndex = 0;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // tableLayoutPanel1
             // 

@@ -193,7 +193,7 @@
             this.DeleteMovieBtn.FillColor = System.Drawing.Color.DarkRed;
             this.DeleteMovieBtn.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteMovieBtn.ForeColor = System.Drawing.Color.White;
-            this.DeleteMovieBtn.Location = new System.Drawing.Point(543, 432);
+            this.DeleteMovieBtn.Location = new System.Drawing.Point(482, 432);
             this.DeleteMovieBtn.Name = "DeleteMovieBtn";
             this.DeleteMovieBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.DeleteMovieBtn.Size = new System.Drawing.Size(45, 45);
@@ -213,7 +213,7 @@
             this.AddToWatchlistBtn.ForeColor = System.Drawing.Color.White;
             this.AddToWatchlistBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddToWatchlistBtn.Image")));
             this.AddToWatchlistBtn.ImageSize = new System.Drawing.Size(28, 28);
-            this.AddToWatchlistBtn.Location = new System.Drawing.Point(492, 432);
+            this.AddToWatchlistBtn.Location = new System.Drawing.Point(533, 432);
             this.AddToWatchlistBtn.Name = "AddToWatchlistBtn";
             this.AddToWatchlistBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.AddToWatchlistBtn.Size = new System.Drawing.Size(45, 45);

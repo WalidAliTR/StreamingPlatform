@@ -40,6 +40,7 @@
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.LoginBtn = new Guna.UI2.WinForms.Guna2TileButton();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,7 +94,7 @@
             this.Passwordtxt.PlaceholderText = "";
             this.Passwordtxt.SelectedText = "";
             this.Passwordtxt.Size = new System.Drawing.Size(225, 36);
-            this.Passwordtxt.TabIndex = 10;
+            this.Passwordtxt.TabIndex = 1;
             this.Passwordtxt.UseSystemPasswordChar = true;
             // 
             // label2
@@ -129,7 +130,7 @@
             this.UserName.PlaceholderText = "";
             this.UserName.SelectedText = "";
             this.UserName.Size = new System.Drawing.Size(225, 36);
-            this.UserName.TabIndex = 11;
+            this.UserName.TabIndex = 0;
             // 
             // label3
             // 
@@ -163,7 +164,7 @@
             this.LoginBtn.Location = new System.Drawing.Point(364, 179);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(81, 90);
-            this.LoginBtn.TabIndex = 13;
+            this.LoginBtn.TabIndex = 2;
             this.LoginBtn.Text = "Login";
             this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
@@ -175,10 +176,21 @@
             this.linkLabel1.Location = new System.Drawing.Point(178, 273);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(127, 15);
-            this.linkLabel1.TabIndex = 14;
+            this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Create A New Account";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(60)))), ((int)(((byte)(126)))));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(445, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 15;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // LoginForm
             // 
@@ -186,6 +198,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(60)))), ((int)(((byte)(126)))));
             this.ClientSize = new System.Drawing.Size(491, 339);
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.LoginBtn);
             this.Controls.Add(this.guna2Separator1);
@@ -217,5 +230,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private Guna.UI2.WinForms.Guna2TileButton LoginBtn;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

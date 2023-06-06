@@ -30,6 +30,7 @@ namespace StreamingPlatform
             {
                 this.Hide();
                 MainMenu menu = new MainMenu();
+                menu.UserName.Text = UserName.Text;
                 menu.Show();
             }
             else { MessageBox.Show("the data is worng, Please Try Again"); UserName.Clear(); Passwordtxt.Clear(); UserName.Focus(); }
@@ -60,6 +61,11 @@ namespace StreamingPlatform
         {
             ManageProfile manageProfile = new ManageProfile();
             manageProfile.ShowDialog();
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

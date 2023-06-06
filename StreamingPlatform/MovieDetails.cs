@@ -32,7 +32,7 @@ namespace StreamingPlatform
                 this.Refresh();
                 this.Hide();
             }
-            catch (Exception ex) { }
+            catch{ }
         }
 
         private void AddToWatchlistBtn_Click(object sender, EventArgs e)
@@ -60,6 +60,7 @@ namespace StreamingPlatform
 
         private void DeleteMovieBtn_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Are You Sure That You Want To Delete The Movie? You Can't Undo That If You Select Yes!","Confirmation Message",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes) { 
             string query = "delete from MovieTb where Name='"+MovieName.Text+"'";
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
@@ -69,6 +70,7 @@ namespace StreamingPlatform
             cmd.ExecuteNonQuery();
             con.Close();
             this.Close();
+            }
         }
 
     }

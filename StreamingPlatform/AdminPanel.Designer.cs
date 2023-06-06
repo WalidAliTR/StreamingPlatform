@@ -77,7 +77,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(933, 50);
+            this.panel1.Size = new System.Drawing.Size(933, 46);
             this.panel1.TabIndex = 0;
             // 
             // guna2ControlBox1
@@ -88,7 +88,7 @@
             this.guna2ControlBox1.Location = new System.Drawing.Point(870, 0);
             this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(63, 50);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(63, 46);
             this.guna2ControlBox1.TabIndex = 0;
             // 
             // AddMoviesBtn

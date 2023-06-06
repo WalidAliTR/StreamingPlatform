@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using static System.Windows.Forms.LinkLabel;
 using System.Web.UI.WebControls;
 
@@ -187,7 +186,10 @@ namespace StreamingPlatform
                     cmd.Parameters.Add(new SqlParameter("@age", AgeRate.Text));
                     cmd.Parameters.Add(new SqlParameter("@type", ShowType.Text));
                     cmd.Parameters.Add(new SqlParameter("@date", ReleaseDate.Value));
-                    cmd.ExecuteNonQuery(); ResetPage(); con.Close();
+                    cmd.ExecuteNonQuery();
+                    cmd = new SqlCommand("update watchlist set MovieName= '"+MovieName.Text+"' where MovieName='"+SearchResults.Text+"'",con);
+                    cmd.ExecuteNonQuery();
+                    ResetPage(); con.Close();
                     MessageBox.Show("Successful!!", "Movie Data Edited Successfully!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -240,8 +242,10 @@ namespace StreamingPlatform
 
         private void PictureBtn_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "jpg files(*.jpg)|*.jpg|png files(*.png)|*.png|All Files(*.*)|*.*";
+            OpenFileDialog dialog = new OpenFileDialog
+            {
+                Filter = "jpg files(*.jpg)|*.jpg|png files(*.png)|*.png|All Files(*.*)|*.*"
+            };
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 imgloc = dialog.FileName.ToString();
